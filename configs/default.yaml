@@ -1,0 +1,19 @@
+data:
+  ticker: SPY
+  start: "2010-01-01"
+  end: null
+  window: 30          # lookback length in days
+  horizon: 1          # predict direction of return `horizon` days ahead
+  train_frac: 0.7
+  val_frac: 0.15      # remainder is test; split chronologically
+model:
+  type: lstm          # lstm | cnn
+  hidden: 64
+  layers: 2
+  dropout: 0.2
+train:
+  epochs: 30
+  batch_size: 64
+  lr: 0.001
+  seed: 42
+  device: auto

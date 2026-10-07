@@ -1,0 +1,16 @@
+[project]
+name = "ml-trade"
+version = "0.1.0"
+description = "CNN and LSTM models for financial market prediction"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "torch", "pyyaml", "yfinance", "scikit-learn"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
